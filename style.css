@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+}
+html{
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.hero-img{
+    width: 80px;
+    height: 80px;
+}
+.footer-img{
+    width: 40px;
+    height: 40px;
+}
+.footer-img2{
+    width: 70px;
+    height: 70px;
+}
+.kıyafer-img{
+    width: 100%;
+    height: 250px;
+}
+.bg-orange{
+    background-color: #DC5000!important;
+}
+.text-orange{
+    color: #DC5000!important;
+}
+.slider-css{
+    height: 800px!important;
+}
+.carousel-item img {
+    height: 800px!important;
+    object-position: center;
+    object-fit:cover;
+  }
+.side-img img {
+    height: 148px!important;
+    width: 148px!important;
+}
+.text-black{
+    color: black!important;
+}
+.start-25{
+    left: 25%!important;
+}
+.golge{
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.cards-wrapper .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+}
+.cins{
+    height: 500px;
+    background-image: url(img/Erkek.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -2px 10px 5px 0px rgba(0,0,0,0.7);
+}
+.cins a h2 {
+    font-size: 100px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.cins2{
+    height: 500px;
+    background-image: url(img/kadın.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -2px 10px 5px 0px rgba(0,0,0,0.7);
+}
+.cins2 a h2 {
+    font-size: 100px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.col-12 ul li img{
+    width: 150px;
+    height: 50px;
+}
+.absolute-active{
+    position: absolute;
+    display: block;
+}
+.absolute-none{
+    display: none;
+}
+/* sepet */
+.Sepet{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 3;
+    background-color: white !important;
+    color: black !important;
+    border: 3px solid black !important;
+    width: 30%;
+}
+.eklenecekyer {
+    border-top: 2px solid black !important;
+    border-bottom: 2px solid black !important;
+}
+.urunresim{
+    width: 50px;
+    height: 100%;
+}
+.urunresim img{
+    width: 100%;
+}
+
+/* login media */
+@media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+}

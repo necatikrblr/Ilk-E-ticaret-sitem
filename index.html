@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-ticaret sitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    
+    <!-- İcon -->
+    <script src="https://kit.fontawesome.com/327330b1d9.js" crossorigin="anonymous"></script>
+    <!--  -->
+</head>
+<body>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white p-0 position-relative ">
+        <div class="container-fluid m-0">
+          <a class="navbar-brand hero-img pt-2 me-3" href="#"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active px-2 fs-5 text-black" aria-current="page" href="index.html">Anasayfa</a>
+              </li>
+              <li class="nav-item position-relative" id="nav-menu">
+                  <a class="nav-link fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Erkek
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-2 fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-menu-2">
+                  Kadın
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-2 fs-5 text-black" aria-current="page" href="hakkımızda.html">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-2 fs-5 text-black" aria-current="page" href="#">İletişim</a>
+              </li>
+            </ul>
+            <div class="d-flex" role="search">
+              <ul class="navbar-nav m-auto mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user fs-4" style="color:black;"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">giriş yap</a></li>
+                    <li><a class="dropdown-item" href="login.html">Kayıt ol</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link shop-btn" id="clickbtn">
+                    <i class="fa-solid fa-cart-shopping fs-4" style="color: black;"></i>
+                  </button>
+                </li>
+            </ul>
+              </div>
+              <div class="Sepet shoping-card absolute-none">
+                <div class="urun-bilgi">
+                    <p class="text-center">Sepetim</p>
+                </div>
+                <div class="eklenecekyer" id="eklenecekyer">
+                </div>
+                <div class="toplam d-flex justify-content-between align-items-center">
+                        <p>toplam tutar <span></span></p>
+                        <button class="btn btn-danger">Ödemeye geç</button>
+                </div>
+            </div>
+          </div>
+          
+        </div> 
+    </nav>
+    <div class="position-relative container-fluid">
+      <div class="container-fluid text-black bg-white absolute-none z-1 rounded-4 top-100 start-25 w-50" id="menu">
+        <div class="row">
+          <div class="col-4 text-center">
+            <h3 class=""><a href="kıyafetler.html" class="text-decoration-none text-black">Giysi</a></h3>
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="kıyafetler.html" class="text-decoration-none text-black">Mont</a></li>
+              <li class="list-group-item border-0">Ceket</li>
+              <li class="list-group-item border-0">T-shirt</li>
+              <li class="list-group-item border-0">Şort</li>
+              <li class="list-group-item border-0">Pantalon</li>
+              <li class="list-group-item border-0">Çorap</li>
+              <li class="list-group-item border-0">Hoodie</li>
+              <li class="list-group-item border-0">Sweat</li>
+              <li class="list-group-item border-0">Bere</li>
+            </ul>
+          </div>
+          <div class="col-4 text-center">
+            <h3 class="">Takı</h3>
+            <ul class="list-group">
+              <li class="list-group-item border-0">Bileklik</li>
+              <li class="list-group-item border-0">Kolye</li>
+              <li class="list-group-item border-0">Yüzük</li>
+              <li class="list-group-item border-0">küpe</li>
+            </ul>
+          </div>
+          <div class="col-4 text-center">
+            <h3 class="">Ayakkabı</h3>
+            <ul class="list-group">
+              <li class="list-group-item border-0">Nike</li>
+              <li class="list-group-item border-0">Jordan</li>
+              <li class="list-group-item border-0">Adidas</li>
+              <li class="list-group-item border-0">Puma</li>
+              <li class="list-group-item border-0">Vans</li>
+              <li class="list-group-item border-0">Converse</li>
+              <li class="list-group-item border-0">Koşu</li>
+              <li class="list-group-item border-0">Basketbol</li>
+              <li class="list-group-item border-0">Futbol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- slider ve liste -->
+      <div class="slider-css">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/slider1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/slider2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/slider3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+  <!-- cinsiyet -->
+    <div class="container-fluid mt-2">
+      <div class="row g-1 justify-content-evenly">
+        <div class="col-12 col-lg-5 cins d-flex align-items-center justify-content-center">
+          <a href="" class="text-decoration-none"><h2 class="">ERKEK</h2></a>
+        </div>
+        <div class="col-12 col-lg-5 cins2 d-flex align-items-center justify-content-center">
+          <a href="" class="text-decoration-none"><h2>KADIN</h2></a>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="container-fluid mt-4">
+      <div class="row text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76651-yuvarlak-mont-png-yuvarlak-mont.png" alt="">
+          </div>
+          <div class="card-text">Mont</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76652-yuvarlak-sweat-png-yuvarlak-sweat.png" alt="">
+          </div>
+          <div class="card-text">Sweat</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76653-yuvarlak-hoodie-png-yuvarlak-hoodie.png" alt="">
+          </div>
+          <div class="card-text">Hoodie</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76654-yuvarlak-pantolon-png-yuvarlak-pantolon.png" alt="">
+          </div>
+          <div class="card-text">Pantalon</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76655-yuvarlak-canta-png-yuvarlak-canta.png" alt="">
+          </div>
+          <div class="card-text">Canta</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76656-yuvarlak-bere-png-yuvarlak-bere.png" alt="">
+          </div>
+          <div class="card-text">Bere</div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76657-yuvarlak-ceket-png-yuvarlak-ceket.png" alt="">
+          </div>
+          <div class="card-text">Ceket</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76658-yuvarlak-esofman-png-yuvarlak-esofman.png" alt="">
+          </div>
+          <div class="card-text">Esofman</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76659-yuvarlak-kolye-png-yuvarlak-kolye.png" alt="">
+          </div>
+          <div class="card-text">Kolye</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76660-yuvarlak-saat-png-yuvarlak-saat.png" alt="">
+          </div>
+          <div class="card-text">Saat</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76661-yuvarlak-corap-png-yuvarlak-corap.png" alt="">
+          </div>
+          <div class="card-text">Çorap</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
+          <div class="card-img-top side-img">
+            <img src="img/76662-yuvarlak-blaklava-png-yuvarlak-blaklava.png" alt="">
+          </div>
+          <div class="card-text">Blaklava</div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider -->
+    <div class="mt-3 d-none d-md-block ">
+      <h2 class="text-center fs-1 ">Trend Ürünler</h2>
+    </div>
+    <div id="carouselExample2" class="carousel slide d-none mt-4 d-md-block golge">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-2.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-3.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-4.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="cards-wrapper">
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-5.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-6.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/card-slider-7.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-8.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="mt-3 d-none d-md-block">
+      <h2 class="text-center fs-1 ">Yeni Çıkanlar</h2>
+    </div>
+    <div id="carouselExample3" class="carousel slide d-none mt-4 d-md-block golge">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-2.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-3.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-4.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="cards-wrapper">
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-5.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-6.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/card-slider-7.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="img/card-slider-8.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title text-black">Card title</h5>
+                <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Sepete ekle</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--  -->
+    <div class="container-fluid m-auto row mt-4">
+      <div class="col-12 col-md-6 float-end text-center">
+        <h2 class="fs-1">Yardımcı olmamızı ister misin ?</h2>
+        <p class="fs-2">Whatsapp <Span style="color: green;">Online</Span></p>
+        <p class="fs-5">Whatsapp hattımız hafta içi  09:00 - 01:00 arasında, cumartesi 14:00 - 02:00 ve pazar günü ise 13:00 - 22:00 arasında hizmet vermektedir.</p>
+      </div>
+      <div class="col-12 col-md-6 text-center">
+        <h2 class="fs-1" style="color: green;">0850 305 11 97</h2>
+        <p class="fs-5">Çağrılarınıza hafta içi 09:00 - 18:00 arasında hizmet vermekteyiz.</p>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="container-fluid bg-black mt-2">
+      <div class="row">
+        <div class="col-12 col-md-4 text-center">
+          <h2 class="text-white">Hemen indirin</h2>
+          <ul class="m-0 p-0">
+            <li><a href=""><img src="img/iosV2.svg" alt="" class=""></a></li>
+            <li><a href=""><img src="img/googleV2.svg" alt="" class=""></a></li>
+            <li><a href=""><img src="img/huaweiV2.svg" alt="" class=""></a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <div class="row justify-content-center">
+            <h2 class="text-white">bizi takip edin</h2>
+            <div class="col-2"><a href="" class=""><img src="img/facebookV2.svg" alt="" class="footer-img"></a></div>
+            <div class="col-2"><a href="" class=""><img src="img/youtubeV2.svg" alt="" class="footer-img"></a></div>
+            <div class="col-2"><a href="" class=""><img src="img/twitterV2.svg" alt="" class="footer-img"></a></div>
+            <div class="col-2 "><a href="" class=""><img src="img/instagramV2.svg" alt="" class="footer-img"></a></div>
+          </div>
+          <div class="row justify-content-center">
+            <h2 class="text-white">Ödeme yöntemleri</h2>
+            <div class="col-6"><a href=""><img src="img/footer-master-card.png" alt="" class="footer-img2"></a></div>
+            <div class="col-6"><a href=""><img src="img/footer-visa-black.png" alt="" class="footer-img2"></a></div>            
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <h2 class="text-white">Yardım</h2>
+          <ul class="m-0 p-0 ">
+            <li class="py-2"><a href="" class="text-decoration-none text-orange">Sıkça Sorulan Sorular</a></li>
+            <li><a href="" class="text-decoration-none text-orange">Canlı Yardım</a></li>
+            <li class="py-2"><a href="" class="text-decoration-none text-orange">Nasıl İade Edebilirim</a></li>
+            <li><a href="" class="text-decoration-none text-orange">İşlem Rehberi</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
