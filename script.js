@@ -41,17 +41,21 @@ sepetclick.addEventListener("click", ()=>{
 
 
 const card = document.getElementsByClassName("card");
-const btnadd = document.querySelectorAll(".btn-add"); 
+const btnadd = document.querySelectorAll(".btn-add");
 const btncard = document.querySelector(".shop-btn");
 const carddiv = document.querySelector(".shoping-card");
+const toplamTutarSpan = document.getElementById("toplamtutar"); // Toplam tutarı gösteren span
 
-class Shopping{
-  constructor(image,title,para){
+class Shopping {
+  constructor(image, title, para) {
     this.image = image;
     this.title = title;
-    this.para = para;
+    this.para = parseFloat(para.replace("₺", "").replace(",", ".")); // Para miktarını düzgün bir sayıya çevirin
+  }
 }
-}
+
+let toplamTutar = 0;
+
 class Ekleme {
   addToCard(shopping) {
     const sepettam = document.querySelector("#eklenecekyer");
@@ -66,10 +70,11 @@ class Ekleme {
     title.textContent = shopping.title;
 
     const paras = document.createElement("span");
-    paras.textContent = shopping.para;
+    paras.textContent = shopping.para + " ₺";
 
-    const silme = document.createElement("span");
-    silme.classList.add("silme");
+    const silDugmesi = document.createElement("button");
+    silDugmesi.classList.add("sil-button");
+    silDugmesi.textContent = "Sil";
 
     const olusturusu = document.createElement("div");
     olusturusu.classList.add(
@@ -82,26 +87,43 @@ class Ekleme {
     olusturusu.appendChild(urunrsm);
     olusturusu.appendChild(title);
     olusturusu.appendChild(paras);
+    olusturusu.appendChild(silDugmesi);
     sepettam.appendChild(olusturusu);
+
+    // Toplam tutarı güncelle
+    toplamTutar += shopping.para;
+    toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺"; // Toplam tutarı güncelle ve 2 basamaklı olarak göster
   }
 }
 
-
+const sepettam = document.querySelector("#eklenecekyer");
 
 btnadd.forEach(btn => {
   btn.addEventListener("click", (e) => {
-    element = e.target
+    element = e.target;
 
-    let resim = element.parentElement.parentElement.children[0].children[0].src
-    let title = element.parentElement.parentElement.children[1].children[0].innerHTML
-    let para = element.parentElement.parentElement.children[1].children[1].children[0].innerHTML
-    let shopping = new Shopping(resim,title,para)
-    let ekle = new Ekleme()
-    
-    ekle.addToCard(shopping)
+    let resim = element.parentElement.parentElement.children[0].children[0].src;
+    let title = element.parentElement.parentElement.children[1].children[0].innerHTML;
+    let para = element.parentElement.parentElement.children[1].children[1].children[0].innerHTML;
+    let shopping = new Shopping(resim, title, para);
+    let ekle = new Ekleme();
 
+    ekle.addToCard(shopping);
 
-})
+    // Her "Sil" düğmesini seçin
+    const silButton = document.querySelectorAll(".sil-button");
 
+    // Her "Sil" düğmesine tıklama olayı ekleyin
+    silButton.forEach(silDugmesi => {
+      silDugmesi.addEventListener("click", () => {
+        // Bu düğme tıklandığında, bu düğmeye sahip öğeyi bulun ve sepetten kaldırın
+        let parentDiv = silDugmesi.parentElement;
+        sepettam.removeChild(parentDiv);
 
-})
+        // Toplam tutarı güncelle
+        toplamTutar -= shopping.para;
+        toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺"; // Toplam tutarı güncelle ve 2 basamaklı olarak göster
+      });
+    });
+  });
+});
