@@ -128,6 +128,25 @@ img{
     width: 100%;
 }
 
+/* kıyafet index */
+.thumbnail {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.2);
+}
+
+.zoomed-image {
+    display: none;
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
 /* login media */
 @media (min-width: 768px) {
     .gradient-form {

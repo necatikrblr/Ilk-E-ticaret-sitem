@@ -127,3 +127,9 @@ btnadd.forEach(btn => {
     });
   });
 });
+
+// kıyafet index js
+function changeImage(imageSrc) {
+  document.getElementById('mainImage').src = imageSrc;
+  document.getElementById('zoomedImage').src = imageSrc; 
+}
