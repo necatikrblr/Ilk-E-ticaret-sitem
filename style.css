@@ -98,24 +98,36 @@ img{
     width: 150px;
     height: 50px;
 }
-.absolute-active{
+#menu {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
     position: absolute;
-    display: block;
-}
-.absolute-none{
-    display: none;
-}
+    /* Diğer stillendirme özellikleri */
+  }
+
+
 /* sepet */
-.Sepet{
+.Sepet {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
     position: absolute;
     top: 100%;
     right: 0;
-    z-index: 3;
     background-color: white !important;
     color: black !important;
     border: 3px solid black !important;
     width: 30%;
-}
+  }
+  
+  .Sepet.absolute-active {
+    max-height: 120dvh;
+    opacity: 1;
+    width: 30%;
+    z-index: 3;
+  }
 .eklenecekyer {
     border-top: 2px solid black !important;
     border-bottom: 2px solid black !important;

@@ -1,29 +1,27 @@
-let menu = document.getElementById("menu");
 let nav = document.getElementById("nav-menu");
 let nav2 = document.getElementById("nav-menu-2");
 
-nav.addEventListener("click", ()=>{
-  if(menu.classList.contains("absolute-active")){
-    menu.classList.add("absolute-none");
-    menu.classList.remove("absolute-active");
-  }
-  else{
-    menu.classList.add("absolute-active");
-    menu.classList.remove("absolute-none");
-  }
-});
-
-nav2.addEventListener("click", ()=>{
-  if(menu.classList.contains("absolute-active")){
-    menu.classList.add("absolute-none");
-    menu.classList.remove("absolute-active");
-  }
-  else{
-    menu.classList.add("absolute-active");
-    menu.classList.remove("absolute-none");
+nav.addEventListener("click", () => {
+  const menu = document.getElementById("menu");
+  if (menu.style.visibility === "visible") {
+    menu.style.visibility = "hidden";
+    menu.style.opacity = "0";
+  } else {
+    menu.style.visibility = "visible";
+    menu.style.opacity = "1";
   }
 });
 
+nav2.addEventListener("click", () => {
+  const menu = document.getElementById("menu");
+  if (menu.style.visibility === "visible") {
+    menu.style.visibility = "hidden";
+    menu.style.opacity = "0";
+  } else {
+    menu.style.visibility = "visible";
+    menu.style.opacity = "1";
+  }
+});
 
 const sepetclick = document.querySelector("#clickbtn");
 const sepet = document.querySelector(".Sepet")
@@ -40,17 +38,25 @@ sepetclick.addEventListener("click", ()=>{
 });
 
 
+
+
+
+
+
+
+
+// sepet yapısı
 const card = document.getElementsByClassName("card");
 const btnadd = document.querySelectorAll(".btn-add");
 const btncard = document.querySelector(".shop-btn");
 const carddiv = document.querySelector(".shoping-card");
-const toplamTutarSpan = document.getElementById("toplamtutar"); // Toplam tutarı gösteren span
+const toplamTutarSpan = document.getElementById("toplamtutar");
 
 class Shopping {
   constructor(image, title, para) {
     this.image = image;
     this.title = title;
-    this.para = parseFloat(para.replace("₺", "").replace(",", ".")); // Para miktarını düzgün bir sayıya çevirin
+    this.para = parseFloat(para.replace("₺", "").replace(",", ".")); 
   }
 }
 
@@ -90,9 +96,8 @@ class Ekleme {
     olusturusu.appendChild(silDugmesi);
     sepettam.appendChild(olusturusu);
 
-    // Toplam tutarı güncelle
     toplamTutar += shopping.para;
-    toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺"; // Toplam tutarı güncelle ve 2 basamaklı olarak göster
+    toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺";
   }
 }
 
@@ -110,19 +115,15 @@ btnadd.forEach(btn => {
 
     ekle.addToCard(shopping);
 
-    // Her "Sil" düğmesini seçin
     const silButton = document.querySelectorAll(".sil-button");
 
-    // Her "Sil" düğmesine tıklama olayı ekleyin
     silButton.forEach(silDugmesi => {
       silDugmesi.addEventListener("click", () => {
-        // Bu düğme tıklandığında, bu düğmeye sahip öğeyi bulun ve sepetten kaldırın
         let parentDiv = silDugmesi.parentElement;
         sepettam.removeChild(parentDiv);
 
-        // Toplam tutarı güncelle
         toplamTutar -= shopping.para;
-        toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺"; // Toplam tutarı güncelle ve 2 basamaklı olarak göster
+        toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺";
       });
     });
   });
@@ -133,3 +134,26 @@ function changeImage(imageSrc) {
   document.getElementById('mainImage').src = imageSrc;
   document.getElementById('zoomedImage').src = imageSrc; 
 }
+const addToCartButton = document.querySelector(".btn-add-to-cart");
+     addToCartButton.addEventListener("click", () => {
+      const productImage = document.querySelector("#mainImage").src;
+      const productName = document.querySelector("h2").textContent;
+      const productPrice = document.querySelector("p:nth-child(3) span").textContent;
+      console.log(productPrice)
+      const shopping = new Shopping(productImage, productName, productPrice);
+      const ekle = new Ekleme();
+      ekle.addToCard(shopping);
+
+      const silButton = document.querySelectorAll(".sil-button");
+      silButton.forEach(silDugmesi => {
+        silDugmesi.addEventListener("click", () => {
+          let parentDiv = silDugmesi.parentElement;
+          sepettam.removeChild(parentDiv);
+  
+          toplamTutar -= shopping.para;
+          toplamTutarSpan.textContent = toplamTutar.toFixed(2) + " ₺";
+        });
+      });
+
+      
+}); 
