@@ -159,6 +159,11 @@ img{
     left: 0;
     z-index: 999;
 }
+
+.footer-logo{
+    width: 80%;
+    filter: drop-shadow(5px 5px 3px #fff);
+}
 /* login media */
 @media (min-width: 768px) {
     .gradient-form {
