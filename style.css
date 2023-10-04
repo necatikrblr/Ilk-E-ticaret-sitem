@@ -6,8 +6,23 @@
     font-family: 'Righteous', cursive;
 }
 html{
+    scrollbar-face-color: #646464;
+    scrollbar-base-color: #646464;
+    scrollbar-3dlight-color: #646464;
+    scrollbar-highlight-color: #646464;
+    scrollbar-track-color: #000;
+    scrollbar-arrow-color: #000;
+    scrollbar-shadow-color: #646464;
+    scrollbar-dark-shadow-color: #646464;
     box-sizing: border-box;
 }
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
 img{
     width: 100%;
 }
@@ -109,18 +124,18 @@ img{
 
 /* sepet */
 .Sepet {
-    max-height: 0;
+    max-height: 60dvh;
     opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow-y: auto;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 0.5%;
     background-color: white !important;
     color: black !important;
-    border: 3px solid black !important;
+    border: 1px solid black !important;
     width: 30%;
-  }
+}
   
   .Sepet.absolute-active {
     max-height: 120dvh;
@@ -129,8 +144,8 @@ img{
     z-index: 3;
   }
 .eklenecekyer {
-    border-top: 2px solid black !important;
-    border-bottom: 2px solid black !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
 }
 .urunresim{
     width: 50px;

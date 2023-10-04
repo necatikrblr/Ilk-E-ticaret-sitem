@@ -24,21 +24,15 @@ nav2.addEventListener("click", () => {
 });
 
 const sepetclick = document.querySelector("#clickbtn");
-const sepet = document.querySelector(".Sepet")
+const sepet = document.querySelector(".Sepet");
 
-sepetclick.addEventListener("click", ()=>{
-  if(sepet.classList.contains("absolute-active")){
-    sepet.classList.add("absolute-none");
-    sepet.classList.remove("absolute-active");
-  }
-  else{
-    sepet.classList.add("absolute-active");
-    sepet.classList.remove("absolute-none");
-  }
+sepetclick.addEventListener("click", () => {
+    if (sepet.classList.contains("absolute-active")) {
+        sepet.classList.remove("absolute-active");
+    } else {
+        sepet.classList.add("absolute-active");
+    }
 });
-
-
-
 
 
 
@@ -78,15 +72,15 @@ class Ekleme {
     const paras = document.createElement("span");
     paras.textContent = shopping.para + " ₺";
 
-    const silDugmesi = document.createElement("button");
-    silDugmesi.classList.add("sil-button");
-    silDugmesi.textContent = "Sil";
+    const silDugmesi = document.createElement("i");
+    silDugmesi.classList.add("fas", "fa-xmark", "sil-button");
 
     const olusturusu = document.createElement("div");
     olusturusu.classList.add(
       "d-flex",
       "justify-content-between",
-      "align-items-center"
+      "align-items-center",
+      "m-3",
     );
 
     urunrsm.appendChild(gercekresim);
