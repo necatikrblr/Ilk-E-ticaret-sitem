@@ -34,6 +34,17 @@ sepetclick.addEventListener("click", () => {
     }
 });
 
+const loginclick = document.querySelector("#login-btn");
+const login = document.querySelector(".login-container");
+
+loginclick.addEventListener("click", () => {
+    if (login.classList.contains("absolute-active")) {
+      login.classList.remove("absolute-active");
+    } else {
+      login.classList.add("absolute-active");
+    }
+});
+
 
 
 

@@ -30,36 +30,32 @@
           </button>
           <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-lg-0 ">
-              <li class="nav-item">
+              <li class="nav-item border-alt">
                 <a class="nav-link active px-2 fs-5 text-black" aria-current="page" href="index.html">Anasayfa</a>
               </li>
-              <li class="nav-item position-relative" id="nav-menu">
-                  <a class="nav-link fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item position-relative border-alt" id="nav-menu">
+                  <a class="nav-link fs-5 text-black " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Erkek
                   </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item border-alt">
                 <a class="nav-link px-2 fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-menu-2">
                   Kadın
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item border-alt">
                 <a class="nav-link px-2 fs-5 text-black" aria-current="page" href="hakkımızda.html">Hakkımızda</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item border-alt">
                 <a class="nav-link px-2 fs-5 text-black" aria-current="page" href="#">İletişim</a>
               </li>
             </ul>
             <div class="d-flex" role="search">
               <ul class="navbar-nav m-auto mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item">
+                  <button class="nav-link" id="login-btn">
                     <i class="fa-solid fa-user fs-4" style="color:black;"></i>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">giriş yap</a></li>
-                    <li><a class="dropdown-item" href="login.html">Kayıt ol</a></li>
-                  </ul>
+                  </button>
                 </li>
                 <li class="nav-item">
                   <button class="nav-link shop-btn" id="clickbtn">
@@ -78,6 +74,12 @@
                   <p class="fs-5 pt-2 ps-2">toplam tutar : <span class="px-2" id="toplamtutar"></span></p>                  
                   <button class="btn btn-dark m-2">Ödemeye geç</button>
                 </div>
+            </div>
+            <div class="login-container">
+              <ul class="p-0 m-0">
+                <li class="p-2 m-0 border-alt"><a href="" class="link-dark text-decoration-none p-0 ">giriş yap</a></li>
+                <li class="p-2 m-0 border-alt"><a href="" class="link-dark text-decoration-none p-0 ">kayıt ol</a></li>
+              </ul>
             </div>
           </div>
           
@@ -128,8 +130,8 @@
     </div>
   </header>
     <!-- slider ve liste -->
-      <div class="slider-css">
-          <div id="carouselExample" class="carousel slide">
+      <div class="slider-css" >
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/slider1.jpg" class="d-block w-100" alt="...">
@@ -166,78 +168,102 @@
     <div class="container-fluid mt-4">
       <div class="row text-center">
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76651-yuvarlak-mont-png-yuvarlak-mont.png" alt="">
-          </div>
-          <div class="card-text">Mont</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76651-yuvarlak-mont-png-yuvarlak-mont.png" alt="">
+            </div>
+            <div class="card-text">Mont</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76652-yuvarlak-sweat-png-yuvarlak-sweat.png" alt="">
-          </div>
-          <div class="card-text">Sweat</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76652-yuvarlak-sweat-png-yuvarlak-sweat.png" alt="">
+            </div>
+            <div class="card-text">Sweat</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76653-yuvarlak-hoodie-png-yuvarlak-hoodie.png" alt="">
-          </div>
-          <div class="card-text">Hoodie</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76653-yuvarlak-hoodie-png-yuvarlak-hoodie.png" alt="">
+            </div>
+            <div class="card-text">Hoodie</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76654-yuvarlak-pantolon-png-yuvarlak-pantolon.png" alt="">
-          </div>
-          <div class="card-text">Pantalon</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76654-yuvarlak-pantolon-png-yuvarlak-pantolon.png" alt="">
+            </div>
+            <div class="card-text">Pantalon</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76655-yuvarlak-canta-png-yuvarlak-canta.png" alt="">
-          </div>
-          <div class="card-text">Canta</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76655-yuvarlak-canta-png-yuvarlak-canta.png" alt="">
+            </div>
+            <div class="card-text">Canta</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76656-yuvarlak-bere-png-yuvarlak-bere.png" alt="">
-          </div>
-          <div class="card-text">Bere</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76656-yuvarlak-bere-png-yuvarlak-bere.png" alt="">
+            </div>
+            <div class="card-text">Bere</div>
+          </a>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76657-yuvarlak-ceket-png-yuvarlak-ceket.png" alt="">
-          </div>
-          <div class="card-text">Ceket</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76657-yuvarlak-ceket-png-yuvarlak-ceket.png" alt="">
+            </div>
+            <div class="card-text">Ceket</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76658-yuvarlak-esofman-png-yuvarlak-esofman.png" alt="">
-          </div>
-          <div class="card-text">Esofman</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76658-yuvarlak-esofman-png-yuvarlak-esofman.png" alt="">
+            </div>
+            <div class="card-text">Esofman</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76659-yuvarlak-kolye-png-yuvarlak-kolye.png" alt="">
-          </div>
-          <div class="card-text">Kolye</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76659-yuvarlak-kolye-png-yuvarlak-kolye.png" alt="">
+            </div>
+            <div class="card-text">Kolye</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76660-yuvarlak-saat-png-yuvarlak-saat.png" alt="">
-          </div>
-          <div class="card-text">Saat</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76660-yuvarlak-saat-png-yuvarlak-saat.png" alt="">
+            </div>
+            <div class="card-text">Saat</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76661-yuvarlak-corap-png-yuvarlak-corap.png" alt="">
-          </div>
-          <div class="card-text">Çorap</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76661-yuvarlak-corap-png-yuvarlak-corap.png" alt="">
+            </div>
+            <div class="card-text">Çorap</div>
+          </a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 card">
-          <div class="card-img-top side-img">
-            <img src="img/76662-yuvarlak-blaklava-png-yuvarlak-blaklava.png" alt="">
-          </div>
-          <div class="card-text">Blaklava</div>
+          <a href="" class="link-dark text-decoration-none">
+            <div class="card-img-top side-img">
+              <img src="img/76662-yuvarlak-blaklava-png-yuvarlak-blaklava.png" alt="">
+            </div>
+            <div class="card-text">Blaklava</div>
+          </a>
         </div>
       </div>
     </div>
@@ -254,7 +280,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -262,7 +288,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -270,7 +296,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -278,7 +304,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
           </div>
@@ -290,7 +316,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -298,7 +324,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card">
@@ -306,7 +332,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -314,7 +340,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
           </div>
@@ -341,7 +367,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -349,7 +375,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -357,7 +383,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -365,7 +391,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
           </div>
@@ -377,7 +403,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -385,7 +411,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card">
@@ -393,7 +419,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
             <div class="card d-none d-md-block">
@@ -401,7 +427,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title text-black">Card title</h5>
                 <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Sepete ekle</a>
+                <a href="#" class="btn btn-dark">Sepete ekle</a>
               </div>
             </div>
           </div>
@@ -417,19 +443,8 @@
       </button>
     </div>
     <!--  -->
-    <div class="container-fluid m-auto row mt-4">
-      <div class="col-12 col-md-6 float-end text-center">
-        <h2 class="fs-1">Yardımcı olmamızı ister misin ?</h2>
-        <p class="fs-2">Whatsapp <Span style="color: green;">Online</Span></p>
-        <p class="fs-5">Whatsapp hattımız hafta içi  09:00 - 01:00 arasında, cumartesi 14:00 - 02:00 ve pazar günü ise 13:00 - 22:00 arasında hizmet vermektedir.</p>
-      </div>
-      <div class="col-12 col-md-6 text-center">
-        <h2 class="fs-1" style="color: green;">0850 305 11 97</h2>
-        <p class="fs-5">Çağrılarınıza hafta içi 09:00 - 18:00 arasında hizmet vermekteyiz.</p>
-      </div>
-    </div>
     <!-- footer -->
-    <footer class="bg-dark">
+    <footer class="bg-dark mt-3">
       <div class="container py-5 text-white">
         <div class="row py-4">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">

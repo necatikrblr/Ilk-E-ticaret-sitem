@@ -6,14 +6,6 @@
     font-family: 'Righteous', cursive;
 }
 html{
-    scrollbar-face-color: #646464;
-    scrollbar-base-color: #646464;
-    scrollbar-3dlight-color: #646464;
-    scrollbar-highlight-color: #646464;
-    scrollbar-track-color: #000;
-    scrollbar-arrow-color: #000;
-    scrollbar-shadow-color: #646464;
-    scrollbar-dark-shadow-color: #646464;
     box-sizing: border-box;
 }
 ::-webkit-scrollbar { width: 8px; height: 3px;}
@@ -25,6 +17,10 @@ html{
 ::-webkit-resizer { background-color: #666;}
 img{
     width: 100%;
+}
+
+.border-alt :hover {
+    border-bottom: 1px solid black !important;
 }
 .hero-img{
     width: 80px;
@@ -120,7 +116,34 @@ img{
     position: absolute;
     /* Diğer stillendirme özellikleri */
   }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 60px !important;
+    width: 60px !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
 
+.login-container {
+    max-height:max-content;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    max-width: max-content;
+}
+.login-container.absolute-active{
+    max-height:max-content;
+    max-width: max-content;
+    opacity: 1;
+    width: 5%;
+    z-index: 5;
+}
 
 /* sepet */
 .Sepet {
