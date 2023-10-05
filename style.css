@@ -18,7 +18,6 @@ html{
 img{
     width: 100%;
 }
-
 .border-alt :hover {
     border-bottom: 1px solid black !important;
 }
@@ -136,6 +135,7 @@ img{
     color: black !important;
     border: 1px solid black !important;
     max-width: max-content;
+    
 }
 .login-container.absolute-active{
     max-height:max-content;
@@ -144,7 +144,6 @@ img{
     width: 5%;
     z-index: 5;
 }
-
 /* sepet */
 .Sepet {
     max-height: 50dvh;
