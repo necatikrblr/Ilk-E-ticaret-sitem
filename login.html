@@ -12,14 +12,14 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <!-- İcon -->
     <script src="https://kit.fontawesome.com/327330b1d9.js" crossorigin="anonymous"></script>
     <!--  -->
 </head>
 <body>
     <!-- navbar -->
-    <header>
+    <header >
       <nav class="navbar navbar-expand-lg bg-white p-0 position-relative">
           <div class="container-fluid m-0">
             <a class="navbar-brand hero-img pt-2 me-3" href="#"><img src="img/logo.png" alt=""></a>
@@ -68,15 +68,15 @@
                   </div>
                   <div class="eklenecekyer" id="eklenecekyer">
                   </div>
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex justify-content-between position-static">
                     <p class="fs-5 pt-2 ps-2">toplam tutar : <span class="px-2" id="toplamtutar"></span></p>                  
                     <button class="btn btn-dark m-2">Ödemeye geç</button>
                   </div>
               </div>
               <div class="login-container">
                 <ul class="p-0 m-0">
-                  <li class="p-2 m-0 border-alt"><a href="" class="link-dark text-decoration-none p-0 ">giriş yap</a></li>
-                  <li class="p-2 m-0 border-alt"><a href="" class="link-dark text-decoration-none p-0 ">kayıt ol</a></li>
+                  <li class="p-2 m-0 border-alt"><a href="#" class="link-dark text-decoration-none p-0 ">giriş yap</a></li>
+                  <li class="p-2 m-0 border-alt"><a href="login.html" class="link-dark text-decoration-none p-0 ">kayıt ol</a></li>
                 </ul>
               </div>
             </div>
@@ -84,8 +84,8 @@
           </div> 
       </nav>
       <div class="position-relative container-fluid">
-        <div class="container-fluid text-black bg-white absolute-none z-1 rounded-4 top-100 start-25 w-50" id="menu">
-          <div class="row">
+        <div class="container-fluid text-black bg-white absolute-none z-1 rounded-4 top-100 start-25 w-50 " id="menu">
+          <div class="row border-5">
             <div class="col-4 text-center">
               <h3 class=""><a href="kıyafetler.html" class="text-decoration-none text-black">Giysi</a></h3>
               <ul class="list-group">
@@ -138,25 +138,24 @@
                     <div class="card-body p-md-5 mx-md-4">
       
                       <div class="text-center mt-3">
-                        <h4 class="mt-1 mb-5 pb-1">Hemen Kayıt ol</h4>
+                        <h4 class="mt-1 mb-5 pb-1">Giriş Yap</h4>
                       </div>
       
                       <form>
       
                         <div class="form-outline mb-4">
-                          <input type="email" id="form2Example11" class="form-control"
-                            placeholder="Phone number or email address" />
                           <label class="form-label" for="form2Example11">Kullanıcı adı</label>
+                          <input type="email" id="form2Example11" class="form-control" />
                         </div>
       
                         <div class="form-outline mb-4">
-                          <input type="password" id="form2Example22" class="form-control" />
                           <label class="form-label" for="form2Example22">Şifre</label>
+                          <input type="password" id="form2Example22" class="form-control" />
                         </div>
       
-                        <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn btn-primary btn-block mb-3" type="button">Giriş yapin</button>
-                          <a class="text-muted" href="#!">Şifreni mi unuttun</a>
+                        <div class="d-flex justify-content-between  pt-1 mb-5 pb-1">
+                          <button class="btn btn-outline-danger btn-block mb-3" type="button">Giriş yapin</button>
+                          <a class="fs-5 text-decoration-none link-danger" href="#">Şifreni mi unuttun</a>
                         </div>
       
                         <div class="d-flex align-items-center justify-content-center pb-4">
@@ -225,5 +224,6 @@
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
