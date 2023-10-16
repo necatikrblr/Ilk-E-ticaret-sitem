@@ -162,6 +162,8 @@ const addToCartButton = document.querySelector(".btn-add-to-cart");
 
       
 }); 
-function changeImage(imgElement, newSrc) {
+
+
+function imgdeg(imgElement, newSrc) {
   imgElement.src = newSrc;
 }

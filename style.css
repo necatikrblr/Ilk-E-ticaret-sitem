@@ -206,7 +206,12 @@ img{
     left: 0;
     z-index: 999;
 }
+.uruncontainer{
+    height: 85dvh;
+}
 
+
+/*  */
 .footer-logo{
     width: 80%;
     filter: drop-shadow(5px 5px 3px #fff);
