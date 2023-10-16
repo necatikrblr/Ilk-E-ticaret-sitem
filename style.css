@@ -147,7 +147,6 @@ img{
 .Sepet {
     max-height: 50dvh;
     opacity: 0;
-    overflow-y: auto;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
     position: absolute;
     top: 100%;
@@ -165,8 +164,20 @@ img{
     z-index: 3;
   }
 .eklenecekyer {
+    max-height: 40dvh;
     border-top: 1px solid black !important;
     border-bottom: 1px solid black !important;
+    overflow-y: auto;
+
+}
+.sepetalt{
+    width: 100%;
+}
+.sepetalt p{
+    font-size: 100%;
+}
+.sepetalt button{
+    font-size: 100%;
 }
 .urunresim{
     width: 50px;
